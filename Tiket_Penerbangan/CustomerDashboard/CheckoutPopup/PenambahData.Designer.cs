@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxTelepon = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2CheckBox3 = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -42,55 +40,34 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.namaLengkap = new System.Windows.Forms.Label();
+            this.nomorTelepon = new System.Windows.Forms.Label();
+            this.alamatEmail = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2TextBox1
+            // textBoxTelepon
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(230, 163);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(637, 32);
-            this.guna2TextBox1.TabIndex = 0;
-            // 
-            // guna2TextBox6
-            // 
-            this.guna2TextBox6.Animated = true;
-            this.guna2TextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.guna2TextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(230, 107);
-            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(637, 32);
-            this.guna2TextBox6.TabIndex = 3;
-            this.guna2TextBox6.TextChanged += new System.EventHandler(this.guna2TextBox6_TextChanged);
-            this.guna2TextBox6.Enter += new System.EventHandler(this.guna2TextBox6_Enter);
-            this.guna2TextBox6.Leave += new System.EventHandler(this.guna2TextBox6_Leave);
+            this.textBoxTelepon.BorderRadius = 8;
+            this.textBoxTelepon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxTelepon.DefaultText = "";
+            this.textBoxTelepon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxTelepon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxTelepon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxTelepon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxTelepon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxTelepon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxTelepon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxTelepon.Location = new System.Drawing.Point(230, 166);
+            this.textBoxTelepon.Margin = new System.Windows.Forms.Padding(4, 7, 4, 5);
+            this.textBoxTelepon.Name = "textBoxTelepon";
+            this.textBoxTelepon.PasswordChar = '\0';
+            this.textBoxTelepon.PlaceholderText = "";
+            this.textBoxTelepon.SelectedText = "";
+            this.textBoxTelepon.Size = new System.Drawing.Size(637, 47);
+            this.textBoxTelepon.TabIndex = 0;
             // 
             // guna2Button1
             // 
@@ -115,28 +92,8 @@
             this.guna2VScrollBar1.Location = new System.Drawing.Point(1021, 22);
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 300);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 504);
             this.guna2VScrollBar1.TabIndex = 12;
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(230, 245);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(637, 32);
-            this.guna2TextBox2.TabIndex = 13;
             // 
             // guna2CheckBox1
             // 
@@ -275,22 +232,91 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
             // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.BorderRadius = 8;
+            this.textBoxEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxEmail.DefaultText = "";
+            this.textBoxEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxEmail.Location = new System.Drawing.Point(232, 225);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4, 7, 4, 5);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.PasswordChar = '\0';
+            this.textBoxEmail.PlaceholderText = "";
+            this.textBoxEmail.SelectedText = "";
+            this.textBoxEmail.Size = new System.Drawing.Size(637, 47);
+            this.textBoxEmail.TabIndex = 22;
+            // 
+            // textBoxNama
+            // 
+            this.textBoxNama.BorderRadius = 8;
+            this.textBoxNama.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxNama.DefaultText = "";
+            this.textBoxNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxNama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxNama.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxNama.Location = new System.Drawing.Point(230, 107);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 7, 4, 5);
+            this.textBoxNama.Name = "textBoxNama";
+            this.textBoxNama.PasswordChar = '\0';
+            this.textBoxNama.PlaceholderText = "";
+            this.textBoxNama.SelectedText = "";
+            this.textBoxNama.Size = new System.Drawing.Size(637, 47);
+            this.textBoxNama.TabIndex = 23;
+            // 
             // namaLengkap
             // 
             this.namaLengkap.AutoSize = true;
-            this.namaLengkap.BackColor = System.Drawing.Color.Transparent;
-            this.namaLengkap.Location = new System.Drawing.Point(227, 107);
+            this.namaLengkap.BackColor = System.Drawing.Color.White;
+            this.namaLengkap.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namaLengkap.Location = new System.Drawing.Point(237, 119);
             this.namaLengkap.Name = "namaLengkap";
-            this.namaLengkap.Size = new System.Drawing.Size(100, 16);
-            this.namaLengkap.TabIndex = 11;
+            this.namaLengkap.Size = new System.Drawing.Size(108, 23);
+            this.namaLengkap.TabIndex = 24;
             this.namaLengkap.Text = "Nama Lengkap";
+            // 
+            // nomorTelepon
+            // 
+            this.nomorTelepon.AutoSize = true;
+            this.nomorTelepon.BackColor = System.Drawing.Color.White;
+            this.nomorTelepon.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomorTelepon.Location = new System.Drawing.Point(237, 177);
+            this.nomorTelepon.Name = "nomorTelepon";
+            this.nomorTelepon.Size = new System.Drawing.Size(108, 23);
+            this.nomorTelepon.TabIndex = 25;
+            this.nomorTelepon.Text = "Nomor Telepon";
+            // 
+            // alamatEmail
+            // 
+            this.alamatEmail.AutoSize = true;
+            this.alamatEmail.BackColor = System.Drawing.Color.White;
+            this.alamatEmail.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alamatEmail.Location = new System.Drawing.Point(237, 236);
+            this.alamatEmail.Name = "alamatEmail";
+            this.alamatEmail.Size = new System.Drawing.Size(96, 23);
+            this.alamatEmail.TabIndex = 26;
+            this.alamatEmail.Text = "Alamat Email";
             // 
             // PenambahData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.alamatEmail);
+            this.Controls.Add(this.nomorTelepon);
             this.Controls.Add(this.namaLengkap);
+            this.Controls.Add(this.textBoxNama);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2CheckBox4);
             this.Controls.Add(this.guna2CheckBox5);
@@ -298,10 +324,8 @@
             this.Controls.Add(this.guna2CheckBox3);
             this.Controls.Add(this.guna2CheckBox2);
             this.Controls.Add(this.guna2CheckBox1);
-            this.Controls.Add(this.guna2TextBox2);
             this.Controls.Add(this.guna2VScrollBar1);
-            this.Controls.Add(this.guna2TextBox6);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.textBoxTelepon);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PenambahData";
             this.Text = "Form1";
@@ -314,11 +338,9 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxTelepon;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox3;
@@ -328,6 +350,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxEmail;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxNama;
         private System.Windows.Forms.Label namaLengkap;
+        private System.Windows.Forms.Label nomorTelepon;
+        private System.Windows.Forms.Label alamatEmail;
     }
 }

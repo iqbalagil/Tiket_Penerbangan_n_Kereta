@@ -166,23 +166,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PenambahData.cs">
+    <Compile Include="CustomerDashboard\CheckoutPopup\PenambahData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PenambahData.Designer.cs">
+    <Compile Include="CustomerDashboard\CheckoutPopup\PenambahData.Designer.cs">
       <DependentUpon>PenambahData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pemesan.cs">
+    <Compile Include="CustomerDashboard\Pesawat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pemesan.Designer.cs">
-      <DependentUpon>Pemesan.cs</DependentUpon>
+    <Compile Include="CustomerDashboard\Pesawat.Designer.cs">
+      <DependentUpon>Pesawat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kereta.cs">
+    <Compile Include="CustomerDashboard\Kereta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kereta.Designer.cs">
+    <Compile Include="CustomerDashboard\Kereta.Designer.cs">
       <DependentUpon>Kereta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRegister\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginRegister\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,14 +197,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tiketPenerbanganDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Pemesan.resx">
-      <DependentUpon>Pemesan.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerDashboard\Pesawat.resx">
+      <DependentUpon>Pesawat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kereta.resx">
+    <EmbeddedResource Include="CustomerDashboard\Kereta.resx">
       <DependentUpon>Kereta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PenambahData.resx">
+    <EmbeddedResource Include="CustomerDashboard\CheckoutPopup\PenambahData.resx">
       <DependentUpon>PenambahData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginRegister\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -236,6 +245,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminDashboard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

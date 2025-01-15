@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tiket_Penerbangan.LoginRegister;
 
 namespace Tiket_Penerbangan
 {
@@ -16,7 +17,7 @@ namespace Tiket_Penerbangan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pemesan());
+            Application.Run(new Login());
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace Tiket_Penerbangan
 {
-    public partial class Pemesan : Form
+    public partial class Pesawat : Form
     {
 
         SqlConnection conn;
 
-        public Pemesan()
+        public Pesawat()
         {
             InitializeComponent();
             this.AutoScaleMode = AutoScaleMode.Dpi;
@@ -46,7 +46,7 @@ namespace Tiket_Penerbangan
 
         private void Pemesanan_Click(object sender, EventArgs e)
         {
-            ChangeView(new Pemesan());
+            ChangeView(new Pesawat());
         }
 
     }
