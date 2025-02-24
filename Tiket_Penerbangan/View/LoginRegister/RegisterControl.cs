@@ -11,7 +11,7 @@ namespace Tiket_Penerbangan.LoginRegister
     public partial class RegisterControl: UserControl
     {
         private readonly ErrorProvider error;
-        private string connectionString = "DefaultConnection";
+        private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public RegisterControl()
         {
@@ -182,7 +182,7 @@ namespace Tiket_Penerbangan.LoginRegister
                     using(SqlConnection conn = new SqlConnection(connectionString))
                     {
                         conn.Open();
-                        string checkQuery = "SELECT COUNT(*) FROM Users WHERE Email = @Email";
+                        string checkQuery = "SELECT COUNT(*) FROM Penumpang WHERE Email = @Email";
                         using(SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
                         {
                             checkCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
@@ -195,8 +195,8 @@ namespace Tiket_Penerbangan.LoginRegister
                             }
                         }
 
-                        string insertQuery = @"INSERT INTO Users (Email, Password, Name, PhoneNumber, Role) " +
-                            "VALUES (@Email, @Password, @Name, @PhoneNumber, @Role)";
+                        string insertQuery = @"INSERT INTO Penumpangs (Email, Password, Username, NoTelepon, Role) " +
+                            "VALUES (@Email, @Password, @Name, @NoTelepon, @Role)";
 
                         using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                         {

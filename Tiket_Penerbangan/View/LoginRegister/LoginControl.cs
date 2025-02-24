@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tiket_Penerbangan.DataAccess;
+using Tiket_Penerbangan.Models;
 using Tiket_Penerbangan.View.CustomerDashboard;
+using Tiket_Penerbangan.View;
 
 namespace Tiket_Penerbangan.LoginRegister
 {
-    public partial class LoginControl: UserControl
+    public partial class LoginControl : UserControl
     {
-        private string connectionString = @"Data Source=DESKTOP-FUM0LMT\TIKEXPRESS;Initial Catalog=tiketPenerbangan;Persist Security Info=True;User ID=iqbal;Password=akuiqbal;Trust Server Certificate=True";
-
-        private readonly UserRepository _userRepository;
+        private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         private ErrorProvider errorProvider = new ErrorProvider();
 
         public LoginControl()
@@ -24,20 +20,11 @@ namespace Tiket_Penerbangan.LoginRegister
             InitializeComponent();
         }
 
-        private void TextEmailValidate(object sender, CancelEventArgs e)
+        private void TextEmailValidate(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(emailTextBox.Text))
             {
                 errorProvider.SetError(emailTextBox, "Email perlu di isi");
-                emailTextBox.BorderColor = Color.Red;
-                e.Cancel = true;
-                return;
-            }
-            else if (emailTextBox.Text.Contains('@') == false)
-            {
-                errorProvider.SetError(emailTextBox, "Email tidak valid");
-                emailTextBox.BorderColor = Color.Red;
-                e.Cancel = true;
                 return;
             }
             else
@@ -47,13 +34,11 @@ namespace Tiket_Penerbangan.LoginRegister
             }
         }
 
-        private void TextPasswordValidate(object sender, CancelEventArgs e)
+        private void TextPasswordValidate(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(passwordTextBox.Text))
             {
                 errorProvider.SetError(passwordTextBox, "Password is required");
-                passwordTextBox.BorderColor = Color.Red;
-                e.Cancel = true;
                 return;
             }
             else
@@ -67,42 +52,61 @@ namespace Tiket_Penerbangan.LoginRegister
         {
             try
             {
-                string email = emailTextBox.Text;
+                string username = emailTextBox.Text;
                 string password = passwordTextBox.Text;
 
-                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     return;
                 }
 
-                var user = await _userRepository.ValidateLogin(email, password);
-                if (user != null)
+                using (var connection = new SqlConnection(connectionString))
                 {
-                    //switch (user.Role.ToLower())
-                    //{
-                    //    case "admin":
-                    //        new AdminDashboardPanel().Show();
-                    //        break;
-                    //    case "petugas":
-                    //        new AdminDashboardPanel().Show();
-                    //        break;
-                    //    default:
-                    //        new CustomerDashboardPanel().Show();
-                    //        break;
+                    await connection.OpenAsync();
 
-                    //}
-                    //this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid email or passwrod.", "Login Failed",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var penumpangCmd = new SqlCommand(
+                        "SELECT PenumpangId, Username, Name FROM Penumpangs WHERE Username = @Username AND Password = @Password",
+                        connection);
+                    penumpangCmd.Parameters.AddWithValue("@Username", username);
+                    penumpangCmd.Parameters.AddWithValue("@Password", password);
+
+                    using (var reader = await penumpangCmd.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            CurrentUser.SetUser((int)reader["PenumpangId"], reader["Username"].ToString(), reader["Name"].ToString(), "Customer");
+                            new CustomerDashboardPanel().Show();
+                            this.Hide();
+                            return;
+                        }
+                    }
+
+                    var petugasCmd = new SqlCommand(
+                        "SELECT p.PetugasId, p.Username, p.Name, p.LevelId, pl.LevelName, pl.Gaji " +
+                        "FROM Petugas p " +
+                        "LEFT JOIN PetugasLevel pl ON p.LevelId = pl.LevelId " +
+                        "WHERE p.Username = @Username AND p.Password = @Password",
+                        connection);
+                    petugasCmd.Parameters.AddWithValue("@Username", username);
+                    petugasCmd.Parameters.AddWithValue("@Password", password);
+
+                    using (var reader = await petugasCmd.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            CurrentUser.SetUser((int)reader["PetugasId"], reader["Username"].ToString(), reader["Name"].ToString(), "Petugas", (int)reader["LevelId"]);
+                            new AdminDashboardPanel().Show();
+                            this.Hide();
+                            return;
+                        }
+                    }
+
+                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occured: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

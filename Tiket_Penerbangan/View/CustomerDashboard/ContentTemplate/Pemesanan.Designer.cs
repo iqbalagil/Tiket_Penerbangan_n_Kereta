@@ -92,11 +92,11 @@
             // 
             this.TotalHargaCard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.TotalHargaCard.AutoSize = true;
-            this.TotalHargaCard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalHargaCard.Location = new System.Drawing.Point(4, 15);
+            this.TotalHargaCard.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalHargaCard.Location = new System.Drawing.Point(4, 17);
             this.TotalHargaCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalHargaCard.Name = "TotalHargaCard";
-            this.TotalHargaCard.Size = new System.Drawing.Size(255, 23);
+            this.TotalHargaCard.Size = new System.Drawing.Size(255, 20);
             this.TotalHargaCard.TabIndex = 2;
             this.TotalHargaCard.Text = "Rp 778.800/pax";
             this.TotalHargaCard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -106,7 +106,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.84848F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.15152F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel4.Controls.Add(this.TanggalCekinCard, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.TglBerangkatCard, 2, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(440, 23);
@@ -125,11 +125,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TanggalCekinCard.AutoSize = true;
-            this.TanggalCekinCard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TanggalCekinCard.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TanggalCekinCard.Location = new System.Drawing.Point(4, 0);
             this.TanggalCekinCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TanggalCekinCard.Name = "TanggalCekinCard";
-            this.TanggalCekinCard.Size = new System.Drawing.Size(91, 49);
+            this.TanggalCekinCard.Size = new System.Drawing.Size(90, 49);
             this.TanggalCekinCard.TabIndex = 2;
             this.TanggalCekinCard.Text = "19:10";
             this.TanggalCekinCard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,11 +140,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TglBerangkatCard.AutoSize = true;
-            this.TglBerangkatCard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TglBerangkatCard.Location = new System.Drawing.Point(170, 0);
+            this.TglBerangkatCard.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TglBerangkatCard.Location = new System.Drawing.Point(167, 0);
             this.TglBerangkatCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TglBerangkatCard.Name = "TglBerangkatCard";
-            this.TglBerangkatCard.Size = new System.Drawing.Size(93, 49);
+            this.TglBerangkatCard.Size = new System.Drawing.Size(96, 49);
             this.TglBerangkatCard.TabIndex = 3;
             this.TglBerangkatCard.Text = "21:10";
             this.TglBerangkatCard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,7 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.namaCard.AutoSize = true;
-            this.namaCard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namaCard.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.namaCard.Location = new System.Drawing.Point(77, 0);
             this.namaCard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.namaCard.Name = "namaCard";

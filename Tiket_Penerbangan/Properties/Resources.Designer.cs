@@ -93,6 +93,16 @@ namespace Tiket_Penerbangan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_airplane_tail_fin_50__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-airplane-tail-fin-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bookmark_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bookmark-64", resourceCulture);
@@ -133,6 +143,16 @@ namespace Tiket_Penerbangan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_exit_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-exit-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_eye_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-eye-50", resourceCulture);
@@ -166,6 +186,16 @@ namespace Tiket_Penerbangan.Properties {
         internal static System.Drawing.Bitmap icons8_lock_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-lock-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reverse_arrow_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reverse-arrow-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
