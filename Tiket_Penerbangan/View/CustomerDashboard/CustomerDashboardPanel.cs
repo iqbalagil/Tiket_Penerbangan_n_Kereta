@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tiket_Penerbangan
+namespace Tiket_Penerbangan.View.CustomerDashboard
 {
-    public partial class Kereta : Form
+    public partial class CustomerDashboardPanel: Form
     {
-        public Kereta()
+        public CustomerDashboardPanel()
         {
             InitializeComponent();
         }
 
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
